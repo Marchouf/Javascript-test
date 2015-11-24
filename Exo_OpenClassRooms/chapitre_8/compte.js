@@ -16,22 +16,27 @@ var CompteBancaire =
     crediter: function(montant)
     {
         this.solde += montant;
-    }
+    },
     
     decrire: function()
     {
-    
+      return ("Titulaire : " + this.titulaire + ", solde : " + this.solde + " euros");
     }
 };
 
-var CompteEpargne =
-{
-   initCE: function(titulaire, montant, interet)
-    {
-        this.titulaire = titulaire;
-        this.montant = montant;
-    }
+var CompteEpargne = Object.create(CompteBancaire);
+
+//
+  CompteEpargne.initCE = function (titulaire, solde, tauxInteret) {
+    this.initCB(titulaire, solde);
+    this.tauxInteret = tauxInteret;
 };
+// Calcule et ajoute les intérêts au solde cu compte
+CompteEpargne.ajouterInterets = function () {
+    var interets = this.solde * this.tauxInteret;
+    this.solde += interets;
+};
+
 
 
 
