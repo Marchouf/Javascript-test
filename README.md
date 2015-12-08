@@ -11,7 +11,9 @@ In this repertory you will have the following subjects :
   * Chapitre_4
   * Chapitre_5
   * Chapitre_6
-  * chapitre_7
+  * Chapitre_7
+  * Chapitre_8
+  * Chapitre_9
 
   
 =======
